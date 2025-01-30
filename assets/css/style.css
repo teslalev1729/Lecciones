@@ -1,0 +1,286 @@
+/* ===================================================
+   PALETA DE COLORES - Variables para fácil ajuste
+   =================================================== */
+   :root {
+    --color-primary: #0D3B66;       /* Azul Marino Intenso - Muy oscuro para encabezados y secciones principales */
+    --color-secondary: #FFFFFF;    /* Blanco Puro - Fondo principal */
+    --color-accent-bg: #CDE4F5;    /* Azul Claro Vivo - Fondo de secciones secundarias o desplegables */
+    --color-body-bg: #F0F4F8;      /* Gris Claro - Fondo base cómodo para los ojos */
+    --color-text: #111111;         /* Negro Casi Puro - Máxima claridad para texto */
+    --color-heading: #0A2A47;      /* Azul Marino Más Oscuro - Ideal para títulos y encabezados destacados */
+    --color-link-hover: #FF6F3C;   /* Naranja Intenso - Contraste llamativo para hover de enlaces */
+    --color-accent: #1C7C34;       /* Verde Intenso - Acentos en botones y elementos interactivos */
+  }
+  
+  /* ===================================================
+     RESET / BASE STYLES
+     =================================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Scroll suave por defecto */
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-body-bg);
+  }
+  
+  /* ===================================================
+     ENLACES
+     =================================================== */
+  a {
+    color: var(--color-primary); /* Azul Marino Intenso */
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+  }
+  
+  a:hover {
+    color: var(--color-link-hover); /* Naranja Intenso */
+  }
+  
+  /* ===================================================
+     TITULOS Y LISTAS
+     =================================================== */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 0.5rem;
+    color: var(--color-heading); /* Azul Marino Más Oscuro */
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--color-text); /* Texto principal */
+  }
+  
+  /* ===================================================
+     CABECERA / HEADER
+     =================================================== */
+  .site-header {
+    background-color: var(--color-primary);
+    color: var(--color-accent-bg); /* Azul Claro Vivo */
+    padding: 1rem 0;
+  }
+  
+  .header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    color: var(--color-secondary); /* Blanco */
+  }
+  
+  .brand p {
+    font-size: 0.9rem;
+    color: var(--color-accent-bg); /* Azul Claro Vivo */
+  }
+  
+  .main-nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .main-nav li {
+    list-style: none;
+  }
+  
+  .main-nav a {
+    color: var(--color-accent-bg); /* Azul Claro Vivo */
+    font-weight: 600;
+  }
+  
+  .main-nav a:hover {
+    color: var(--color-link-hover); /* Naranja Intenso */
+  }
+  
+  /* ===================================================
+     SECCION HERO (PORTADA)
+     =================================================== */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: var(--color-secondary); /* Fondo Blanco */
+  }
+  
+  .hero-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+  .hero-image1 img {
+    border-radius: 0%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+  }
+  
+  .hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary); /* Azul Marino Intenso */
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    color: var(--color-text); /* Negro Casi Puro */
+  }
+  
+  /* ===================================================
+     SECCIONES COMUNES (ABOUT, CONTACT, ETC.)
+     =================================================== */
+  .about-section,
+  .contact-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: var(--color-secondary); /* Fondo Blanco */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  }
+  
+  .about-section h2,
+  .contact-section h2 {
+    margin-bottom: 1rem;
+    color: var(--color-heading); /* Azul Marino Más Oscuro */
+  }
+  
+  /* ===================================================
+     🎭 ACCORDION (Sección Apuntes - Más Estrecho y Fondo Blanco)
+     =================================================== */
+.accordion-container {
+    width: 90%; /* Mantiene el mismo ancho que las otras secciones */
+    max-width: 1000px; /* Misma restricción de tamaño */
+    margin: 2rem auto; /* Centrado */
+    background-color: var(--color-secondary); /* Blanco, igual que Sobre mí y Contacto */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 📌 Estilos de cada botón del acordeón */
+  .accordion-header {
+    cursor: pointer;
+    background-color: var(--color-accent-bg); /* Azul Claro Vivo */
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 6px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .accordion-header:hover {
+    background-color: var(--color-link-hover); /* Naranja Intenso */
+    color: var(--color-secondary);
+    transform: scale(1.02); /* Efecto leve al pasar el mouse */
+  }
+  
+  .accordion-header h2 {
+    margin: 0;
+    font-size: 1.2rem; /* Tamaño de fuente adecuado */
+    color: var(--color-heading);
+  }
+  
+  /* 📌 Contenido del acordeón */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background-color: var(--color-secondary); /* Blanco, igual que otras secciones */
+    border-left: 3px solid var(--color-primary); /* Azul Marino */
+    padding: 0 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordion-content.expanded {
+    padding: 1rem;
+  }
+  
+  .accordion-content p,
+  .accordion-content ul {
+    margin-bottom: 0.8rem;
+    color: var(--color-text);
+  }
+  
+  
+  /* ===================================================
+     PIE DE PAGINA / FOOTER
+     =================================================== */
+  .site-footer {
+    background-color: var(--color-primary); /* Azul Marino Intenso */
+    color: var(--color-accent-bg); /* Azul Claro Vivo */
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* ===================================================
+     RESPONSIVE MEDIA QUERIES
+     =================================================== */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+      
+    .hero-image img {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
